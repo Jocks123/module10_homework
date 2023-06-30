@@ -1,9 +1,7 @@
 function reverseString(str) {
-    var newString = "";
-    for (var i =str.leght -1; i >= 0; i--){
-        newString += str[i]
-    }
-    return newString
-}
-
-reverseString("Hello")
+    let charArray = str.split(""); // Преобразовать строку в массив символов
+    charArray.reverse(); // Изменить порядок символов в массиве
+    let reversedString = charArray.join(""); // Преобразовать массив обратно в строку
+    return reversedString;
+  }
+  reverseString("Hello");

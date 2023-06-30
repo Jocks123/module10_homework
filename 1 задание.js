@@ -1,11 +1,17 @@
-
-let a = +prompt ("Введите число:")
-if (typeof a === 'number' && !isNaN(a)) {
-    if (a % 2 === 0) {
-        console.log("Четное")
-    } else {
-        console.log("нечетное")    
-    }
+let input = prompt("Введите число:");
+if (input === null) {
+  console.log("Ввод отменён");
 } else {
-    console.log("Упс, кажется, вы ошиблись")
+  let a = parseFloat(input.trim());
+  if (isNaN(a)) {
+    console.log("Упс, кажется, вы ошиблись");
+  } else if (Number.isInteger(a)) {
+    if (a % 2 === 0) {
+      console.log("Четное");
+    } else {
+      console.log("Нечетное");
+    }
+  } else {
+    console.log("Введено нецелое число");
+  }
 }
